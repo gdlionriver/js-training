@@ -1,0 +1,57 @@
+.welcome{
+    background-image: url(images/welcome.jpg);
+    padding: 150px 0px; text-align: center;
+    font-size: 30px; color:white;
+    font-weight: bold;
+}
+
+
+.title{
+    text-align:center;
+    font-weight:bold;
+    font-size: 20px;
+}
+
+.paths{
+    display: flex; /*讓內部的元件並排*/
+    justify-content: center; /*水平對齊:center  靠左對齊:flex-start 靠右對齊:flex-end*/
+    flex-wrap: wrap; /*允許內部的元件往下排列*/
+}
+
+.path{
+    width: 300px;
+    text-align:center;
+}
+
+
+
+.introductionArea{
+    display: flex;
+    justify-content:center;
+    align-items:center; 
+}
+
+
+.introduction{
+    padding: 100px 50px;;
+    text-align: center;
+}
+
+
+/* css media query */
+@media(max-width:900px){ 
+    /* 螢幕尺寸小於 900 的時候，套用這個區塊的設定 */
+    /* 因為path的寬度是300px */
+    .paths{
+        width: 30%;
+    }
+}
+@media(max-width:600px){ 
+    /* 螢幕尺寸小於 600px 的時候，套用這個區塊的設定 */
+    .welcome{
+        padding: 79px 0px;
+    }
+    .paths{
+        width:90%;
+    }
+}
