@@ -1,0 +1,180 @@
+https://training.pada-x.com/online.htm
+===================================================================
+js, html易學難精
+
+
+
+編碼utf-8
+<meta charset="UTF-8"> 沒寫Chrome不會變亂碼,沒寫IE才會變亂碼
+
+網頁換行的原則
+    1.程式碼中的換行沒有影響
+    2.注意標籤的顯示模式 (display)
+        2.1 行內模式 inline
+        2.2 區塊模式 block(自動換行)
+    3. 隨時可以用<br/>強迫換行
+
+
+相容性
+Chrome, Firefox, Safari(5~10%的人在使用), Edge(5~10%的人在使用), IE10
+
+
+
+statconter global stats : 蠻有名的免費趨勢調查網站
+各個瀏覽器 的市佔率，這就是給你一個釣竿啦，你需要說服別人就可以用這個網站，很多媒體再引用。
+通常在全球占有率高的，在台灣會佔更高。
+使用者趨勢研究小幫手，是一個網站流量分析工具，主要提供網頁瀏覽器的使用分布的訊息
+
+
+! + tab 一個基本的網頁結構
+
+html 會管網頁結構，css 會管其他的細節。
+
+任何一個標籤，加上style屬性，裡面寫css語法(屬性 : 屬性資料)
+
+本身自帶樣式的標籤<h3>文字放大 變粗體 行距拉大，會忽略一些細節
+
+有了css之後有了兩個標籤大量使用，<div><span>。最常用的標籤<div>
+
+div是乾淨的，沒有帶任何樣式的標籤。
+div是一個乾淨的標籤，但是它是一個乾淨的區塊行標籤，會產生斷行的效果。
+
+span乾淨的行內型標籤，不會造成斷行。
+
+網頁的每一個標籤，都是在網頁配置一個方型區塊
+
+網頁是平面設計的概念，使用者看到的是文章
+
+chrome F12
+
+
+===================================================================
+0429(三)    
+
+CSS
+
+1. CSS 基礎與法。
+    font-weight:bold    /*文字粗體*/    
+    font-size:20px      /*字型大小*/ 
+    color:red           /*文字顏色*/
+
+
+2. CSS Box Model。
+    margin-top:20px;        /*兩個區塊之間的距離*/
+    margin-bottom: 20px;
+    border: 1px dashed blue;/*區塊的邊框:邊框的寬度 邊框樣式solid,dashed 邊框顏色*/
+    padding: 10px;  /*填塞:內容與邊框的距離*/
+    
+
+3. 標籤的寬度與高度設定。
+    width: 400px;   /*標籤寬度，預設100%*/
+    height: 200px;  /*標籤的高度，斷行用</br>，一般常見的網頁設計，比較不會設計高度，因為高度隨內容撐高，是非常自然我們還蠻喜歡這樣的狀況，非必要比較少去做高度設定。*/
+    /*老師提醒：標籤的寬度&高度，只能夠設定像DIV這種區塊式標籤 會斷行的標籤，不能設定在SPAN這種行內標籤，這是網頁設計上的規矩。*/
+
+
+4. CSS選擇器簡介。
+    1.標籤內設定 style 屬性。
+    2.  <head>
+            <style type="text/css">
+                /*集中管理，用大括號做包裹。標籤加上 class 選擇器*/
+
+                .title{margin-top:20px;}
+            </style>
+        </head>
+
+
+
+5. 定位模式簡介。
+    position:absolute ; left:200px;top:50px;/*position:更改標籤的定位模式 absolute絕對位置:標籤位置指定座標位置。*/
+    /*
+        絕對位置跑到任意的地方，會完全獨立於一般的定位模式之外，正因為這個特性可以放在任何地方，不會對版面造成影響。
+        position:absolute ; left:200px;top:0px;   //這樣區塊就會靠在右上角，放活動訊息。
+    */
+    
+    position:relative ; left:200px;top:50px; /*相對定位。以原始位置為基準點做位移，位移200px，在向下位移50px，不是以整個網頁為基準點做位移。*/
+    /*
+        相對定位使用在小範圍的位移，小區塊的位移。        
+        例如老公公的平方：老公公<span style="position:relative;top:-8px">2</span>
+    */
+
+
+
+6. CSS 表格樣式
+    <head>
+        <style type="text/css">
+            table{
+                width: 400; /*//取消設定，只有橫向格子線條，沒有縱向格子線條  //border:1px solid #888888;*/ /**/
+
+                border-collapse: collapse; /*border-collapse邊線崩塌 決定表格格子之間的邊線要不要兩個變成一個*/
+            }
+            td{
+                /*border:1px solid #888888;padding: 10px;*/
+                border-bottom:1px solid #888888;padding: 10px; /*只有橫向格子線條，沒有縱向格子線條*/
+            }
+
+            /*表格中的第一對tr*/ /*欄位名稱*/
+            tr:nth-child(1){
+                background-color:#7788aa;color: #ffffff;
+            }
+
+            /*表格中的第偶數對 tr */ /*偶數列背景灰色*/
+            tr:nth-child(even){
+                background-color: #e8e8e8;
+            }
+        </style>
+    </head>
+
+
+
+===================================================================
+0502
+layout.html
+layout.css
+
+切版 34萬
+
+手機網頁跟電腦網頁，技術是一樣的
+
+手機尺寸最小抓360就可以了，360~4xx是最常見的。
+
+
+GitHub 登入
+"your repositories"
+"New"
+Repository name
+Public
+勾選Initialize this repository with a README
+
+settings
+GitHub Pages "master branch"
+
+你的主網址：
+https://gdlionriver.github.io/js-training/index.html
+
+連到網站上的任何一個檔案
+https://gdlionriver.github.io/js-training/檔案名稱
+https://gdlionriver.github.io/js-training/layout.html
+
+
+Danger Zone
+Delete this repository 刪除專案
+
+
+
+
+js.html
+Java & JavaScript是完全不一樣的東西，兩者是沒有關係。
+
+Java 是原Sun Microsystems昇陽公司推出的面向物件的程式設計語言
+JavaScript 程式設計語言由 Netscape, Inc. 開發，並非 Java 平台的一部分。
+
+
+
+JavaScript 與Java是兩個公司開發的不同的兩個產品。
+Java 是原Sun Microsystems公司推出的面向物件的程式設計語言，特別適合於網際網路應用程式開發；
+而JavaScript是Netscape公司的產品，為了擴充套件Netscape瀏覽器的功能而開發的一種可以嵌入Web頁面中執行的基於物件和事件驅動的解釋性語言。
+JavaScript的前身是LiveScript；而Java的前身是Oak語言。
+
+
+
+vbscript 死掉了，沒人在用了。
